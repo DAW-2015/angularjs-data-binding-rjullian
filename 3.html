@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo formulário simples</title>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
+  <script src="app.js"></script>  
+
+</head>
+<body ng-app="formExample">
+  <div ng-controller="FormController as fCtrl">
+  <form novalidate ng-submit="fCtrl.update(user)">
+    Name: <input type="text" ng-model="user.name" /><br /><br />
+    Comment: <textarea ng-model="user.comment"></textarea><br /><br />
+    Avaliation: <input type="radio" ng-model="user.avaliation" value="1" />1
+    <input type="radio" ng-model="user.avaliation" value="2" />2
+    <input type="radio" ng-model="user.avaliation" value="3" />3
+    <input type="radio" ng-model="user.avaliation" value="4" />4
+    <input type="radio" ng-model="user.avaliation" value="5" />5<br /><br />
+    <input type="button" ng-click="fCtrl.reset()" value="Reset" />
+    <input type="button" ng-click="fCtrl.test(user)" value="Save" />
+  </form>
+  <p class="container"> 
+  </p>
+</div>
+</body>
+</html>
